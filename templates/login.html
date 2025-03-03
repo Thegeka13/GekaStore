@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<main class="flex-grow-1 d-flex justify-content-center align-items-center">
+    <div class="card p-4 shadow-lg" style="width: 350px;">
+        <h3 class="text-center mb-4">Iniciar Sesión</h3>
+        <form action="/login" method="POST">
+            <!-- Usuario / Correo -->
+            <div class="mb-3">
+                <label for="email" class="form-label">Correo o Usuario</label>
+                <input type="text" class="form-control" id="email" name="email" required>
+            </div>
+
+            <!-- Contraseña -->
+            <div class="mb-3">
+                <label for="password" class="form-label">Contraseña</label>
+                <input type="password" class="form-control" id="password" name="password" required>
+            </div>
+
+            <!-- Botón de Iniciar Sesión -->
+            <button type="submit" class="btn btn-success w-100">Iniciar Sesión</button>
+
+            <!-- Olvidaste tu contraseña -->
+            <div class="text-center mt-3">
+                <a href="/forgot-password" class="text-muted">¿Olvidaste tu contraseña?</a>
+            </div>
+        </form>
+    </div>
+</main>
+
+
+{% endblock %}
